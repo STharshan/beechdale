@@ -72,7 +72,7 @@ export default function Review() {
       {/* === Background image scrolls normally === */}
       <div className="absolute inset-0">
         <img
-          src="https://www.jeton.com/_ipx/f_webp&q_80&w_3400/cms/b7c674ecd0ee69b2eca20443cac6272c550ed396-4000x2667.jpg"
+          src="/bg.jpg"
           alt="Hear it from our clients"
           className="w-full h-full object-cover"
         />
@@ -95,16 +95,12 @@ export default function Review() {
           <div
             key={i}
             ref={(el) => (cardsRef.current[i] = el)}
-            className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
+            className="w-full bg-white/10 backdrop-blur-md rounded-2xl h-60 border border-white/10 
                        shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
+            <p className="text-lg md:text-xl font-semibold mb-3">{item.initials}</p>
             <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
             <div className="flex items-center gap-13">
-              <span
-                className="flex items-center justify-center font-semibold text-primary"
-              >
-                {item.initials}
-              </span>
               <span>{item.name}</span>
             </div>
           </div>
