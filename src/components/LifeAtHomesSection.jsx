@@ -1,30 +1,43 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function LifeAtHomesSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const items = [
     {
       title: "Beautiful Gardens",
       src: "/landscaped-garden-with-benches.jpg",
       alt: "Beautiful landscaped gardens with benches for residents",
+      animation: "fade-right",
     },
     {
       title: "Dining Together",
       src: "/spacious-care-home-dining-room.jpg",
       alt: "Spacious dining room with natural light",
+      animation: "zoom-in",
     },
     {
       title: "Activities & Engagement",
       src: "/bright-care-home-lounge-area.jpg",
       alt: "Residents enjoying activities in bright lounge",
-    }
+      animation: "fade-left",
+    },
   ];
 
   return (
     <section className="py-16 md:py-24 bg-[#F9F6F1]">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div
+          className="text-center mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3C2E2B] mb-4">
             Life at our homes
           </h2>
@@ -39,6 +52,7 @@ export default function LifeAtHomesSection() {
             <div
               key={i}
               className="group relative aspect-4/3 overflow-hidden rounded-lg cursor-pointer"
+              data-aos={item.animation}
             >
               <img
                 src={item.src}

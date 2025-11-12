@@ -1,8 +1,18 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Phone } from "lucide-react";
 
 export default function HeroSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (in ms)
+      once: true, // whether animation should happen only once
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
       {/* 🎬 Background Video */}
@@ -25,18 +35,29 @@ export default function HeroSection() {
 
       {/* 🧡 Hero Content */}
       <div className="relative z-10 container text-center text-white px-4">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#F48B3A] drop-shadow-lg">
+        <h1
+          data-aos="fade-down"
+          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#F48B3A] drop-shadow-lg"
+        >
           Beechdale House Nursing Home
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow"
+        >
           Where compassionate, person-centred care meets the comfort of home. Our experienced team
           provides exceptional residential, dementia, respite and nursing care in a welcoming
           environment where your loved ones can truly flourish.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <button className="inline-flex items-center justify-center h-10 rounded-md px-6 bg-[#C87637] hover:bg-[#B35E23] text-white text-sm font-medium shadow-lg transition-all">
             Book a visit
           </button>

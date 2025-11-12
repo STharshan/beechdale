@@ -1,8 +1,18 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ArrowRight } from "lucide-react";
 
 export default function CareTypesSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration (ms)
+      once: true, // animate only once when scrolled into view
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   const careTypes = [
     {
       title: "Residential Care",
@@ -34,7 +44,11 @@ export default function CareTypesSection() {
     <section className="py-16 md:py-24 bg-[#F9F6F1]">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div
+          className="text-center mb-12"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3C2E2B] mb-4">
             Types of care we provide
           </h2>
@@ -49,13 +63,15 @@ export default function CareTypesSection() {
             <a
               key={i}
               href={item.href}
-              className="group bg-white flex flex-col gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-sm hover:shadow-md transition-all h-full"
+              data-aos="fade-up"
+              data-aos-delay={i * 150} // staggered animation
+              className="group bg-[#C87637]  flex flex-col gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-md hover:shadow-[#B35E23] hover:scale-[1.02] transition-all duration-300 h-full"
             >
               <div className="grid gap-2 px-6">
-                <h3 className="font-serif font-semibold text-xl text-[#3C2E2B] group-hover:text-[#C87637] transition-colors">
+                <h3 className="font-serif font-semibold text-xl text-black transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#3C2E2B]/70 leading-relaxed">
+                <p className="text-sm text-gray-700 leading-relaxed">
                   {item.description}
                 </p>
               </div>
