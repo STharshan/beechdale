@@ -45,13 +45,13 @@ export default function WelcomeSection() {
             >
               <a
                 href="/facilities"
-                className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium text-white bg-[#7399C6] hover:bg-[#6187B3] rounded-md shadow transition-all"
+                className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium text-white bg-primary bg-secondary-hover rounded-md shadow transition-all"
               >
                 Explore Our Facilities
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium border border-[#3C2E2B]/20 rounded-md shadow-sm bg-white hover:bg-[#E8DCC7]/50 text-[#3C2E2B] transition-all"
+                className="inline-flex items-center justify-center h-10 px-6 text-sm font-medium border border-[#3C2E2B]/20 rounded-md shadow-sm bg-white bg-secondary-hover text-black transition-all"
               >
                 Arrange a Visit
               </a>

@@ -37,12 +37,12 @@ export default function FooterSection() {
             {/* Rating Grid */}
             <div className="grid md:grid-cols-[220px_1fr] gap-0">
               {/* Left Panel */}
-              <div className="bg-[#3d7c4a] text-white p-6 md:p-8 flex items-center justify-center rounded-t-lg md:rounded-l-lg md:rounded-tr-none relative">
+              <div className="bg-primary text-white p-6 md:p-8 flex items-center justify-center rounded-t-lg md:rounded-l-lg md:rounded-tr-none relative">
                 <div className="text-center">
                   <div className="font-bold text-xl md:text-2xl mb-1">Overall</div>
                   <div className="font-bold text-2xl md:text-3xl">Good</div>
                 </div>
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-t-25 border-t-transparent border-l-25 border-l-[#3d7c4a] border-b-25 border-b-transparent" />
+                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-t-25 border-t-transparent border-l-25 border-b-25 border-b-transparent" />
               </div>
 
               {/* Right Ratings */}
@@ -50,7 +50,7 @@ export default function FooterSection() {
                 {ratingItems.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-between px-4 py-3 hover:bg-[#E6D8C3]/40 transition-colors"
+                    className="flex items-center justify-between px-4 py-3 bg-secondary-hover transition-colors"
                   >
                     <span className="font-medium text-base text-[#3C2E2B]">
                       {item.label}
@@ -59,7 +59,7 @@ export default function FooterSection() {
                       <span className="font-semibold text-base text-[#3C2E2B]">
                         {item.rating}
                       </span>
-                      <div className="w-5 h-5 rounded-full bg-[#3d7c4a] flex items-center justify-center">
+                      <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
                         <Check className="h-3 w-3 text-white" strokeWidth={3} />
                       </div>
                     </div>

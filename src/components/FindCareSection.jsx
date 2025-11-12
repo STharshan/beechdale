@@ -39,7 +39,7 @@ export default function FindCareSection() {
             data-aos-delay="400"
           >
             {/* Download brochure button */}
-            <button className="inline-flex items-center justify-center gap-2 h-10 px-6 text-sm font-medium rounded-md bg-white text-[#7399C6] hover:bg-white/90 transition-all shadow hover:scale-105 active:scale-105">
+            <button className="inline-flex items-center justify-center gap-2 h-10 px-6 text-sm font-medium rounded-md bg-white text-primary hover:bg-white/90 transition-all shadow hover:scale-105 active:scale-105">
               <Download className="h-5 w-5 mr-1" />
               Download brochure
             </button>

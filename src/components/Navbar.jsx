@@ -44,19 +44,19 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="tel:01159292792"
-            className="inline-flex items-center justify-center h-8 rounded-md gap-1.5 px-3 border border-[#D8BFA6] text-[#3C2E2B] hover:text-[#C87637] hover:bg-[#F2E8DD] bg-transparent text-sm font-medium transition-all"
+            className="inline-flex items-center justify-center h-8 rounded-md gap-1.5 px-3 border border-primary text-[#3C2E2B] text-primary-hover  bg-transparent hover:bg-[#F2E8DD] text-sm font-medium transition-all"
           >
             <Phone className="h-4 w-4 mr-2" strokeWidth={2} />
             0115 929 2792
           </a>
-          <button className="inline-flex items-center justify-center h-8 rounded-md px-3 bg-[#C87637] hover:bg-[#B35E23] text-white text-sm font-medium transition-colors">
+          <button className="inline-flex items-center justify-center h-8 rounded-md px-3 bg-primary bg-secondary-hover text-white text-sm font-medium transition-colors">
             Book a visit
           </button>
         </div>
 
         {/* Mobile Hamburger Icon */}
         <button
-          className="md:hidden p-2 text-[#3C2E2B] hover:text-[#C87637] transition-colors"
+          className="md:hidden p-2 text-[#3C2E2B] text-primary-hover transition-colors"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -77,7 +77,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="block text-base font-medium text-[#3C2E2B]/80 hover:text-[#C87637] hover:bg-[#F2E8DD] rounded-md px-3 py-2 transition-colors"
+                className="block text-base font-medium text-[#3C2E2B]/80 bg-secondary-hover hover:bg-[#F2E8DD] rounded-md px-3 py-2 transition-colors"
               >
                 {item.name}
               </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
             {/* Mobile Buttons */}
             <a
               href="tel:01159292792"
-              className="mt-3 inline-flex items-center justify-center w-full h-10 rounded-md gap-2 px-3 border border-[#D8BFA6] text-[#3C2E2B] hover:text-[#C87637] hover:bg-[#F2E8DD] text-sm font-medium transition-all"
+              className="mt-3 inline-flex items-center justify-center w-full h-10 rounded-md gap-2 px-3 border border-primary  text-[#3C2E2B] text-primary-hover hover:bg-[#F2E8DD] text-sm font-medium transition-all"
             >
               <Phone className="h-4 w-4" strokeWidth={2} />
               0115 929 2792
@@ -94,7 +94,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setMenuOpen(false)}
-              className="mt-3 inline-flex items-center justify-center w-full h-10 rounded-md bg-[#C87637] hover:bg-[#B35E23] text-white text-sm font-medium transition-colors"
+              className="mt-3 inline-flex items-center justify-center w-full h-10 rounded-md bg-primary bg-secondary-hover text-white text-sm font-medium transition-colors"
             >
               Book a visit
             </button>

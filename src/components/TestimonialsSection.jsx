@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
           data-aos="zoom-in"
           data-aos-duration="1000"
         >
-          <div className="bg-[#C87637] rounded-xl shadow-lg py-10 px-6 md:px-12 text-center">
+          <div className="bg-primary rounded-xl shadow-lg py-10 px-6 md:px-12 text-center">
             {/* Stars */}
             <div className="flex justify-center gap-1 mb-6">
               {[...Array(5)].map((_, i) => (
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
             <button
               onClick={handlePrev}
               aria-label="Previous testimonial"
-              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 hover:bg-[#E8DCC7]/50 transition-all"
+              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 bg-secondary-hover transition-all"
             >
               <ChevronLeft className="h-4 w-4 text-[#3C2E2B]" />
             </button>
@@ -116,7 +116,7 @@ export default function TestimonialsSection() {
                   onClick={() => setIndex(i)}
                   className={`h-2 rounded-full transition-all ${
                     index === i
-                      ? "w-8 bg-black"
+                      ? "w-8 bg-primary"
                       : "w-2 bg-[#3C2E2B]/20 hover:bg-[#7399C6]/50"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -127,7 +127,7 @@ export default function TestimonialsSection() {
             <button
               onClick={handleNext}
               aria-label="Next testimonial"
-              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 hover:bg-[#E8DCC7]/50 transition-all"
+              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 bg-secondary-hover transition-all"
             >
               <ChevronRight className="h-4 w-4 text-[#3C2E2B]" />
             </button>

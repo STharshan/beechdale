@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="relative z-10 container text-center text-white px-4">
         <h1
           data-aos="fade-down"
-          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#F48B3A] drop-shadow-lg"
+          className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary drop-shadow-lg"
         >
           Beechdale House Nursing Home
         </h1>
@@ -58,13 +58,13 @@ export default function HeroSection() {
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          <button className="inline-flex items-center justify-center h-10 rounded-md px-6 bg-[#C87637] hover:bg-[#B35E23] text-white text-sm font-medium shadow-lg transition-all">
+          <button className="inline-flex items-center justify-center h-10 rounded-md px-6 bg-primary bg-secondary-hover text-white text-sm font-medium shadow-lg transition-all">
             Book a visit
           </button>
 
           <a
             href="tel:01159292792"
-            className="inline-flex items-center justify-center h-10 rounded-md px-6 border border-white/20 bg-white/10 backdrop-blur text-white hover:bg-white/20 hover:border-[#C87637] text-sm font-medium shadow-lg transition-all"
+            className="inline-flex items-center justify-center h-10 rounded-md px-6 border border-white/20 bg-white/10 backdrop-blur text-white border-primary-hover text-sm font-medium shadow-lg transition-all"
           >
             <Phone className="h-5 w-5 mr-2" />
             Call 0115 929 2792

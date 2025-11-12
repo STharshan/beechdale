@@ -65,19 +65,19 @@ export default function CareTypesSection() {
               href={item.href}
               data-aos="fade-up"
               data-aos-delay={i * 150} // staggered animation
-              className="group bg-[#C87637]  flex flex-col gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-md hover:shadow-[#B35E23] hover:scale-[1.02] transition-all duration-300 h-full"
+              className="group bg-primary flex flex-col gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-md shadow-secondary-hover hover:scale-[1.02] transition-all duration-300 h-full"
             >
               <div className="grid gap-2 px-6">
                 <h3 className="font-serif font-semibold text-xl text-black transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-sm text-gray-200 leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
               <div className="px-6 flex items-center justify-end">
-                <ArrowRight className="h-4 w-4 text-[#C87637] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
           ))}
