@@ -1,138 +1,114 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-export default function TestimonialsSection() {
-  const testimonials = [
-    {
-      quote:
-        "Willowbank is specifically designed for dementia and it shows. Mum feels safe and secure here. The circular layout means she can wander safely, and the staff always have time for a chat. We visit daily and always leave impressed by the care she receives.",
-      author: "Emma T.",
-      role: "Daughter",
-    },
-    {
-      quote:
-        "This care is second to none. My Mum has improved beyond recognition since she was admitted. She is more mobile, safe and happy, giving our family peace of mind.",
-      author: "Jackie H.",
-      role: "Daughter of Resident",
-    },
-    {
-      quote:
-        "A truly wonderful team. The staff treat every resident with warmth, patience and respect — it feels like an extended family.",
-      author: "Mark P.",
-      role: "Son",
-    },
-    {
-      quote:
-        "I can’t thank the team enough for their constant support and kindness. Every day they go above and beyond for my father’s comfort and wellbeing.",
-      author: "Laura D.",
-      role: "Daughter",
-    },
-  ];
+export default function Review() {
+  const sectionRef = useRef(null);
+  const cardsContainerRef = useRef(null);
+  const cardsRef = useRef([]);
 
-  const [index, setIndex] = useState(0);
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const cards = cardsRef.current;
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+      // initial states
+      gsap.set(cards, { yPercent: 30, opacity: 0 });
+      gsap.set(cards[0], { yPercent: 0, opacity: 1 });
+
+      // timeline for card reveal
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: cardsContainerRef.current,
+          start: "top 80%",
+          end: "+=" + cards.length * 400,
+          scrub: 1.5,
+        },
+      });
+
+      // Animate each card one by one
+      cards.forEach((card, i) => {
+        if (i === 0) return;
+        tl.to(cards[i], { opacity: 1, yPercent: 0, duration: 1 }, i * 0.5);
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
-  const handlePrev = () =>
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  const handleNext = () =>
-    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-
-  const testimonial = testimonials[index];
+  const testimonials = [
+     {
+      text:
+        "Willowbank is specifically designed for dementia and it shows. Mum feels safe and secure here. The circular layout means she can wander safely, and the staff always have time for a chat. We visit daily and always leave impressed by the care she receives.",
+      name: "Emma T.",
+      initials: "Daughter",
+    },
+    {
+      text:
+        "This care is second to none. My Mum has improved beyond recognition since she was admitted. She is more mobile, safe and happy, giving our family peace of mind.",
+      name: "Jackie H.",
+      initials: "Daughter of Resident",
+    },
+    {
+      text:
+        "A truly wonderful team. The staff treat every resident with warmth, patience and respect — it feels like an extended family.",
+      name: "Mark P.",
+      initials: "Son",
+    },
+    {
+      text:
+        "I can’t thank the team enough for their constant support and kindness. Every day they go above and beyond for my father’s comfort and wellbeing.",
+      name: "Laura D.",
+      initials: "Daughter",
+    }
+  ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F9F6F1]">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <div
-          className="text-center mb-12"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3C2E2B] mb-4">
-            What families say
-          </h2>
-          <p className="text-lg text-[#3C2E2B]/70">
-            Trusted by hundreds of families across the North West
-          </p>
-        </div>
+    <section
+      ref={sectionRef}
+      className="relative bg-black text-white overflow-hidden"
+    >
+      {/* === Background image scrolls normally === */}
+      <div className="absolute inset-0">
+        <img
+          src="https://www.jeton.com/_ipx/f_webp&q_80&w_3400/cms/b7c674ecd0ee69b2eca20443cac6272c550ed396-4000x2667.jpg"
+          alt="Hear it from our clients"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
-        {/* Testimonial Card */}
-        <div
-          className="max-w-4xl mx-auto relative"
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-        >
-          <div className="bg-primary rounded-xl shadow-lg py-10 px-6 md:px-12 text-center">
-            {/* Stars */}
-            <div className="flex justify-center gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-5 w-5 text-black"
-                  strokeWidth={2}
-                />
-              ))}
-            </div>
+      {/* === Heading === */}
+      <div className="relative z-10 text-center pt-32 pb-12">
+        <h2 className="text-4xl md:text-5xl font-semibold text-primary">
+          Hear it from our clients
+        </h2>
+      </div>
 
-            {/* Quote */}
-            <blockquote className="text-lg md:text-xl text-black leading-relaxed mb-6">
-              “{testimonial.quote}”
-            </blockquote>
-
-            {/* Author */}
-            <div>
-              <p className="font-semibold text-black">
-                {testimonial.author}
-              </p>
-              <p className="text-sm text-black">{testimonial.role}</p>
-            </div>
-          </div>
-
-          {/* Controls */}
+      {/* === Cards container === */}
+      <div
+        ref={cardsContainerRef}
+        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-32"
+      >
+        {testimonials.map((item, i) => (
           <div
-            className="flex items-center justify-center gap-6 mt-8"
-            data-aos="fade-up"
-            data-aos-delay="200"
+            key={i}
+            ref={(el) => (cardsRef.current[i] = el)}
+            className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
+                       shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
-            <button
-              onClick={handlePrev}
-              aria-label="Previous testimonial"
-              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 bg-secondary-hover transition-all"
-            >
-              <ChevronLeft className="h-4 w-4 text-[#3C2E2B]" />
-            </button>
-
-            {/* Pagination Dots */}
-            <div className="flex gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`h-2 rounded-full transition-all ${
-                    index === i
-                      ? "w-8 bg-primary"
-                      : "w-2 bg-[#3C2E2B]/20 hover:bg-[#7399C6]/50"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
+            <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
+            <div className="flex items-center gap-13">
+              <span
+                className="flex items-center justify-center font-semibold text-primary"
+              >
+                {item.initials}
+              </span>
+              <span>{item.name}</span>
             </div>
-
-            <button
-              onClick={handleNext}
-              aria-label="Next testimonial"
-              className="size-9 flex items-center justify-center rounded-full border border-[#3C2E2B]/20 bg-secondary-hover transition-all"
-            >
-              <ChevronRight className="h-4 w-4 text-[#3C2E2B]" />
-            </button>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

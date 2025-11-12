@@ -6,7 +6,7 @@ import HeroSection from "./components/Herosection"
 import LifeAtHomesSection from "./components/LifeAtHomesSection"
 import Navbar from "./components/Navbar"
 import StatsSection from "./components/StatsSection"
-import TestimonialsSection from "./components/TestimonialsSection"
+import Review from "./components/TestimonialsSection"
 import WelcomeSection from "./components/WelcomeSection"
 
 
@@ -20,7 +20,7 @@ function App() {
       <CareTypesSection />
       <CareMeaningSection />
       <LifeAtHomesSection />
-      <TestimonialsSection />
+      <Review />
       <WelcomeSection />
       <FindCareSection />
       <FooterSection />
