@@ -10,20 +10,20 @@ export default function LifeAtHomesSection() {
 
   const items = [
     {
-      title: "Beautiful Gardens",
-      src: "/a1.webp",
+      title: "Dining together",
+      src: "/a1.jpg",
       alt: "Beautiful landscaped gardens with benches for residents",
       animation: "fade-right",
     },
     {
-      title: "Dining Together",
-      src: "/a2.webp",
+      title: "Activities",
+      src: "/a2.jpg",
       alt: "Spacious dining room with natural light",
       animation: "zoom-in",
     },
     {
-      title: "Activities & Engagement",
-      src: "/a3.webp",
+      title: "Garden",
+      src: "/a3.jpg",
       alt: "Residents enjoying activities in bright lounge",
       animation: "fade-left",
     },
@@ -62,7 +62,7 @@ export default function LifeAtHomesSection() {
                 decoding="async"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#3C2E2B]/60 to-transparent flex items-end p-4">
-                <span className="text-white font-medium">{item.title}</span>
+                <span className="text-white text-lg font-medium">{item.title}</span>
               </div>
             </div>
           ))}
