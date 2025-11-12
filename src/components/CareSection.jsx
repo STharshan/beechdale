@@ -17,25 +17,25 @@ export default function CareTypesSection() {
     {
       title: "Residential Care",
       description:
-        "Supportive care for those who need help with daily activities whilst maintaining their independence.",
+        "The rooms come fully furnished with internet, Wifi, TV and Radio connectivity for entertainment and communication with families wherever they may be. Some of the ground floor suites have direct access from the room into the garden courtyard.",
       href: "/care/residential/",
-    },
-    {
-      title: "Dementia Care",
-      description:
-        "Specialist support for individuals living with dementia, from mild to advanced stages.",
-      href: "/care/dementia/",
-    },
-    {
-      title: "Respite Care",
-      description:
-        "Short-term care giving families and carers a well-deserved break whilst loved ones receive excellent support.",
-      href: "/care/respite/",
     },
     {
       title: "Nursing Care",
       description:
-        "24-hour nursing care for those with complex medical needs, delivered by qualified nursing professionals.",
+        "Specialist Nurses and staff on hand 24 hours a day to help with any resident need, whether that be assisting in daily tasks like washing and dressing or simply having a chat over a cup of tea.",
+      href: "/care/dementia/",
+    },
+    {
+      title: "Dementia Care",
+      description:
+        "A dedicated specialist dementia unit with a large terrace balcony offers residents easily accessible outdoor space.",
+      href: "/care/respite/",
+    },
+    {
+      title: "Respite Care",
+      description:
+        "This is short term accommodation that we can offer for as short as one week, across all our units, Residential, Nursing and Dementia.",
       href: "/care/nursing/",
     },
   ];
@@ -65,8 +65,9 @@ export default function CareTypesSection() {
               href={item.href}
               data-aos="fade-up"
               data-aos-delay={i * 150} // staggered animation
-              className="group bg-primary flex flex-col gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-md shadow-secondary-hover hover:scale-[1.02] transition-all duration-300 h-full"
+              className="group bg-primary flex flex-col justify-between gap-6 rounded-xl border border-[#E8DCC7]/70 py-6 shadow-md shadow-secondary-hover hover:scale-[1.02] transition-all duration-300 h-full"
             >
+              {/* Card content */}
               <div className="grid gap-2 px-6">
                 <h3 className="font-serif font-semibold text-xl text-black transition-colors">
                   {item.title}
@@ -76,7 +77,8 @@ export default function CareTypesSection() {
                 </p>
               </div>
 
-              <div className="px-6 flex items-center justify-end">
+              {/* Arrow at the bottom */}
+              <div className="px-6 flex items-center justify-end mt-auto">
                 <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1 transition-transform" />
               </div>
             </a>

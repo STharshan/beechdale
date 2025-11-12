@@ -39,7 +39,7 @@ export default function HeroSection() {
           data-aos="fade-down"
           className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary drop-shadow-lg"
         >
-          Beechdale House Nursing Home
+          Beechdale Carehome
         </h1>
 
         <p
@@ -47,9 +47,7 @@ export default function HeroSection() {
           data-aos-delay="200"
           className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow"
         >
-          Where compassionate, person-centred care meets the comfort of home. Our experienced team
-          provides exceptional residential, dementia, respite and nursing care in a welcoming
-          environment where your loved ones can truly flourish.
+      Beechdale Manor is a luxurious purpose-built care home offering an oasis of peace and tranquillity in luxurious and caring surroundings.
         </p>
 
         {/* Buttons */}
@@ -63,11 +61,11 @@ export default function HeroSection() {
           </button>
 
           <a
-            href="tel:01159292792"
+            href="tel:0115 849 6400"
             className="inline-flex items-center justify-center h-10 rounded-md px-6 border border-white/20 bg-white/10 backdrop-blur text-white border-primary-hover text-sm font-medium shadow-lg transition-all"
           >
             <Phone className="h-5 w-5 mr-2" />
-            Call 0115 929 2792
+            Call 0115 849 6400
           </a>
         </div>
       </div>

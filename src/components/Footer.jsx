@@ -102,29 +102,30 @@ export default function FooterSection() {
           {/* Column 1 */}
           <div>
             <h3 className="font-serif text-lg font-semibold mb-4">
-              Beechdale House Nursing Home
+              Beechdale Carehome
             </h3>
             <p className="text-sm text-white/80 mb-4 leading-relaxed">
               Exceptional care in a welcoming environment
             </p>
             <div className="space-y-2 text-sm text-white/80">
-              <p>Beechdale Road</p>
-              <p>Nottingham, NG8 3EY</p>
+              <p>
+                40 Beechdale Road, </p>
+              <p>Nottingham NG8 3AJ</p>
               <p className="pt-2">
                 <a
-                  href="tel:01159292792"
+                  href="tel:0115 849 6400"
                   className="hover:text-white transition-colors"
                 >
-                  0115 929 2792
+                  0115 849 6400
                 </a>
               </p>
               <p>
                 <a
-                  href="mailto:enquiries@beechdalehouse.co.uk"
+                  href="mailto:info@beechdalecare.co.uk"
                   className="hover:text-white transition-colors inline-flex items-center gap-1"
                 >
                   <Mail className="h-3 w-3" />
-                  enquiries@beechdalehouse.co.uk
+                  info@beechdalecare.co.uk
                 </a>
               </p>
             </div>
@@ -247,7 +248,7 @@ export default function FooterSection() {
         {/* Footer Bottom */}
         <div className="mt-8 pt-8 border-t border-white/20 text-center">
           <p className="text-sm text-white/60">
-            © 2025 Beechdale House Nursing Home. All rights reserved.
+            © 2025 Beechdale Carehome. All rights reserved.
           </p>
           <p className="text-center font-semibold text-gray-400">
             Powered by{" "}

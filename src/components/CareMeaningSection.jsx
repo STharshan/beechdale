@@ -51,7 +51,7 @@ export default function CareMeaningSection() {
           data-aos-delay="100"
         >
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-olly-3823497-Bxy04EgSGHvQ94tpLfxJmCafcJsK7N.jpg"
+            src="a4.jpeg"
             alt="Caregiver sharing a warm moment with an elderly resident"
             className="w-full h-auto object-cover"
             loading="lazy"

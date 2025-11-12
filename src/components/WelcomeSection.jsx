@@ -15,7 +15,7 @@ export default function WelcomeSection() {
           {/* Left Content */}
           <div data-aos="fade-right" data-aos-duration="1000">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3C2E2B] mb-6">
-              Welcome to Beechdale House
+              Welcome to Beechdale Carehome
             </h2>
 
             <p
@@ -65,7 +65,7 @@ export default function WelcomeSection() {
             data-aos-duration="1200"
           >
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-RakTIisJ0EAJiAyymseMPrLY1JiM68.png"
+              src="a5.jpg"
               alt="Beechdale House entrance with elegant white columns and glass doors"
               className="object-cover w-full h-full"
               loading="lazy"

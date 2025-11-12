@@ -98,9 +98,9 @@ export default function Review() {
             className="w-full bg-white/10 backdrop-blur-md rounded-2xl h-60 border border-white/10 
                        shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
-            <p className="text-lg md:text-xl font-semibold mb-3">{item.initials}</p>
+            <p className="text-lg md:text-xl font-semibold mb-3 text-primary">{item.initials}</p>
             <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
-            <div className="flex items-center gap-13">
+            <div className="flex items-center gap-13 text-primary">
               <span>{item.name}</span>
             </div>
           </div>

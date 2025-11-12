@@ -23,7 +23,7 @@ export default function Navbar() {
           className="flex items-center space-x-2 transition-opacity hover:opacity-80"
         >
           <span className="font-serif text-xl font-semibold text-[#3C2E2B]">
-            Beechdale House Nursing Home
+            Beechdale Carehome
           </span>
         </a>
 
@@ -43,11 +43,11 @@ export default function Navbar() {
         {/* Right Side Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:01159292792"
+            href="tel:0115 849 6400"
             className="inline-flex items-center justify-center h-8 rounded-md gap-1.5 px-3 border border-primary text-[#3C2E2B] text-primary-hover  bg-transparent text-sm font-medium transition-all"
           >
             <Phone className="h-4 w-4 mr-2" strokeWidth={2} />
-            0115 929 2792
+           0115 849 6400
           </a>
           <button className="inline-flex items-center justify-center h-8 rounded-md px-3 bg-primary bg-secondary-hover text-white text-sm font-medium transition-colors">
             Book a visit
@@ -85,11 +85,11 @@ export default function Navbar() {
 
             {/* Mobile Buttons */}
             <a
-              href="tel:01159292792"
+              href="tel:0115 849 6400"
               className="mt-3 inline-flex items-center justify-center w-full h-10 rounded-md gap-2 px-3 border border-primary  text-[#3C2E2B] text-primary-hover hover:bg-[#F2E8DD] text-sm font-medium transition-all"
             >
               <Phone className="h-4 w-4" strokeWidth={2} />
-              0115 929 2792
+              0115 849 6400
             </a>
 
             <button
