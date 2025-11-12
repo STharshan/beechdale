@@ -42,7 +42,7 @@ export default function FooterSection() {
                   <div className="font-bold text-xl md:text-2xl mb-1">Overall</div>
                   <div className="font-bold text-2xl md:text-3xl">Good</div>
                 </div>
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-t-25 border-t-transparent border-l-25 border-b-25 border-b-transparent" />
+                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-t-25  border-t-transparent border-l-25 border-b-25 border-b-transparent" />
               </div>
 
               {/* Right Ratings */}
@@ -50,7 +50,7 @@ export default function FooterSection() {
                 {ratingItems.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-between px-4 py-3 bg-secondary-hover transition-colors"
+                    className="flex items-center justify-between px-4 py-3 bg-secondary-hover rounded-lg transition-colors"
                   >
                     <span className="font-medium text-base text-[#3C2E2B]">
                       {item.label}
@@ -248,6 +248,17 @@ export default function FooterSection() {
         <div className="mt-8 pt-8 border-t border-white/20 text-center">
           <p className="text-sm text-white/60">
             © 2025 Beechdale House Nursing Home. All rights reserved.
+          </p>
+          <p className="text-center font-semibold text-gray-400">
+            Powered by{" "}
+            <a
+              href="https://www.ansely.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Ansely
+            </a>
           </p>
         </div>
       </div>

@@ -11,19 +11,19 @@ export default function LifeAtHomesSection() {
   const items = [
     {
       title: "Beautiful Gardens",
-      src: "/landscaped-garden-with-benches.jpg",
+      src: "/a1.webp",
       alt: "Beautiful landscaped gardens with benches for residents",
       animation: "fade-right",
     },
     {
       title: "Dining Together",
-      src: "/spacious-care-home-dining-room.jpg",
+      src: "/a2.webp",
       alt: "Spacious dining room with natural light",
       animation: "zoom-in",
     },
     {
       title: "Activities & Engagement",
-      src: "/bright-care-home-lounge-area.jpg",
+      src: "/a3.webp",
       alt: "Residents enjoying activities in bright lounge",
       animation: "fade-left",
     },

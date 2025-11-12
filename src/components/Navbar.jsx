@@ -33,7 +33,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-[#3C2E2B]/70 hover:text-[#C87637] transition-colors py-2"
+              className="text-sm font-medium text-[#3C2E2B]/70 text-primary-hover transition-colors py-2"
             >
               {item.name}
             </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="tel:01159292792"
-            className="inline-flex items-center justify-center h-8 rounded-md gap-1.5 px-3 border border-primary text-[#3C2E2B] text-primary-hover  bg-transparent hover:bg-[#F2E8DD] text-sm font-medium transition-all"
+            className="inline-flex items-center justify-center h-8 rounded-md gap-1.5 px-3 border border-primary text-[#3C2E2B] text-primary-hover  bg-transparent text-sm font-medium transition-all"
           >
             <Phone className="h-4 w-4 mr-2" strokeWidth={2} />
             0115 929 2792
