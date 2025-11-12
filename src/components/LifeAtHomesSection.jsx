@@ -17,22 +17,7 @@ export default function LifeAtHomesSection() {
       title: "Activities & Engagement",
       src: "/bright-care-home-lounge-area.jpg",
       alt: "Residents enjoying activities in bright lounge",
-    },
-    {
-      title: "Wellness Support",
-      src: "/care-home-wellness-room.jpg",
-      alt: "Wellness and therapy room",
-    },
-    {
-      title: "Comfortable Rooms",
-      src: "/cosy-care-home-bedroom.jpg",
-      alt: "Cosy bedroom with personal touches",
-    },
-    {
-      title: "Outdoor Spaces",
-      src: "/care-home-riverside-terrace.jpg",
-      alt: "Riverside terrace for outdoor relaxation",
-    },
+    }
   ];
 
   return (
@@ -43,7 +28,7 @@ export default function LifeAtHomesSection() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#3C2E2B] mb-4">
             Life at our homes
           </h2>
-          <p className="text-lg text-[#3C2E2B]/70 max-w-2xl mx-auto">
+          <p className="text-lg text-black max-w-2xl mx-auto">
             Explore our welcoming environments where comfort meets care
           </p>
         </div>

@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
                             {[...Array(5)].map((_, i) => (
                                 <Star
                                     key={i}
-                                    className="h-5 w-5 fill-[#7399C6] text-[#7399C6]"
+                                    className="h-5 w-5  text-black"
                                     strokeWidth={2}
                                 />
                             ))}
@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
                                     key={i}
                                     onClick={() => setIndex(i)}
                                     className={`h-2 rounded-full transition-all ${index === i
-                                            ? "w-8 bg-[#7399C6]"
+                                            ? "w-8 bg-black"
                                             : "w-2 bg-[#3C2E2B]/20 hover:bg-[#7399C6]/50"
                                         }`}
                                     aria-label={`Go to testimonial ${i + 1}`}

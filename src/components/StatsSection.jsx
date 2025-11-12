@@ -5,19 +5,19 @@ import { Award, Calendar, Users, Star } from "lucide-react";
 export default function StatsSection() {
   const stats = [
     {
-      icon: <Award className="h-5 w-5 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Award className="h-5 w-5" strokeWidth={2} />,
       label: "CQC Good",
     },
     {
-      icon: <Calendar className="h-5 w-5 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Calendar className="h-5 w-5" strokeWidth={2} />,
       label: "Established 1995",
     },
     {
-      icon: <Users className="h-5 w-5 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Users className="h-5 w-5 " strokeWidth={2} />,
       label: "96% family satisfaction",
     },
     {
-      icon: <Star className="h-5 w-5 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Star className="h-5 w-5" strokeWidth={2} />,
       label: "4.6★ Reviews",
     },
   ];

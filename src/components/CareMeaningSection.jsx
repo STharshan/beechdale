@@ -5,17 +5,17 @@ import { Heart, Activity, Users } from "lucide-react";
 export default function CareMeaningSection() {
   const features = [
     {
-      icon: <Heart className="h-8 w-8 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Heart className="h-8 w-8 " strokeWidth={2} />,
       title: "Personalised Plans",
       text: "Every resident receives a tailored care plan developed with family input, reviewed regularly, and adapted as needs change.",
     },
     {
-      icon: <Activity className="h-8 w-8 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Activity className="h-8 w-8 " strokeWidth={2} />,
       title: "Wellbeing & Activities",
       text: "Engaging programmes promoting physical, mental, and social wellbeing through activities, exercise, arts, and entertainment.",
     },
     {
-      icon: <Users className="h-8 w-8 text-[#7399C6]" strokeWidth={2} />,
+      icon: <Users className="h-8 w-8" strokeWidth={2} />,
       title: "Family Involvement",
       text: "We welcome family participation in care decisions, daily life, and special events. Your visits enrich our community.",
     },
