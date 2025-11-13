@@ -72,7 +72,7 @@ export default function Review() {
       {/* === Background image scrolls normally === */}
       <div className="absolute inset-0">
         <img
-          src="/bg.jpg"
+          src="/bg.png"
           alt="Hear it from our clients"
           className="w-full h-full object-cover"
         />
